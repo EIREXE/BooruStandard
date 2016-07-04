@@ -1,4 +1,6 @@
-# The two systems
+# Tags
+
+## The two systems
 Boorus traditionally used underscore based systems:
 > red_hair blue_eyes order:score score:>10
 
@@ -8,22 +10,22 @@ However, this system is primitive and counter intuitive, a comma based system ca
 
 This will find all images that contain a character that has green, blue or red hair and blue eyes and it will sort the images by score but will only contain images that have a score of over 10 points.
 
-# Tag categories
+## Tag categories
 Tags should have categories that are assignated mainly for presentation purposes and serve no use when searching, for example, wether a tag represents either a character("Mario"), a series("Super Mario Bros."), an artist ("unya") or a normal tag("Red Hair"):
 
 ![](https://i.imgur.com/inmnMk6.png)
 
 This allows you to present stuff in a better way, instead of presenting the characters tags artist tags and series tags in the same place.
 
-# Ways of doing tagging
+## Ways of doing tagging
 
 Traditionally Boorus have had to ways of dealing with tagging and what should be a tag, there are some boorus (Specially those centered around R34) that prefer to simply list who the characters are, their series and them some minimal description, for example what software it was animated in (Source Filmmaker) or wether or not the image is animated.
 
 That is one way of doing it, however what most boorus opt for is a more detailed way of tagging in the section on top of this one you can find a perfect example from danbooru.
 
-## Comma-based system
+### Comma-based system
 
-### Description
+#### Description
 Comma-based systems uses commas (,) to separate tags.
 
 It is more intuitive for the user as it is more similar to a written list, and it allows much more english-like word formations, that's why it's the one chosen to become the standard way of doing tag searches.
@@ -33,9 +35,9 @@ Tags are not case sensitive.
 Example:
 >red hair or green hair, blue eyes, sort by score, score > 10
 
-### Ordering
+#### Ordering
 Ordering has a special case for comments, where referring to comments actually means referring to the comment count.
-#### Order by
+##### Order by
 >Order by score
 
 >Order by descending comments
@@ -43,7 +45,7 @@ Ordering has a special case for comments, where referring to comments actually m
 >Order by ascending comments
 
 
-#### Comparative
+##### Comparative
 Examples:
 > Score > 10
 
@@ -53,12 +55,12 @@ Examples:
 
 > Score is 10
 
-# Reserved characters
+## Reserved characters
 The reserved characters that are not allowed in tags are the following:
 
 **,**
 
-### Example implementation
+#### Example implementation
 All tags should be saved as an individual list, it is not necessary to store the raw format of the tags ("red hair, blue hair"), instead storing them as individual objects that have a two-way relationship with the image should be done, so that the image object itself contains all the tags it uses and the tag object contains all the images that have that tag, plus other information like tag categories, this is also for efficiency reasons, querying a tag and seeing what images it contains is faster than seeing what images contain certain tag, as you are not querying all the images at the same time.
 
 A classical implementation of tags goes as follows:
