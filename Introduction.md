@@ -1,11 +1,13 @@
-# What is a booru?
+# Introduction
+
+## What is a booru?
 A booru is a imageboard similar to Danbooru in it's tagging style.
 
-# What is a tag?
+## What is a tag?
 
 A tag is a short word or series of word to precisely identify features of images, for example "long hair" "long shirt", some boorus that are more character-centric ignore specific descriptions and instead use character and series names only for example "Mario" "Super Mario Bros."
 
-# What is the objective of the booru standard?
+## What is the objective of the booru standard?
 Currently there are many boorus, some use slightly different tagging systems than the others, for example Danbooru-derived boorus use underscore-based tags:
 
 > hat plumber blue_eyes
